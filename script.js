@@ -1,4 +1,3 @@
-
 // DOM Manipulation - Adding training programs
 const trainingPrograms = [
     {
@@ -21,17 +20,17 @@ const trainingPrograms = [
 const trainingCardsContainer = document.getElementById('training-cards');
 
 trainingPrograms.forEach(program => {
-    const card = document.createElement('div');
+    const card = document.createElement('section'); // already changed from div to section
     card.className = 'card bg-white p-6 rounded-lg shadow-lg border border-blue-100';
     card.innerHTML = `
                 <h3 class="text-xl font-bold text-blue-700 mb-2">${program.title}</h3>
                 <p class="text-gray-700 mb-4">${program.description}</p>
-                <div class="flex justify-between items-center">
+                <section class="flex justify-between items-center"> <!-- changed from div to section -->
                     <span class="text-sm text-blue-600">${program.duration}</span>
                     <button class="bg-blue-100 text-blue-700 px-4 py-1 rounded-lg hover:bg-blue-200 transition-colors">
                         عرض التفاصيل
                     </button>
-                </div>
+                </section>
             `;
     trainingCardsContainer.appendChild(card);
 });
@@ -79,7 +78,7 @@ async function loadTestimonials() {
         const testimonialsContainer = document.getElementById('testimonials');
 
         data.forEach(comment => {
-            const testimonial = document.createElement('div');
+            const testimonial = document.createElement('section'); // changed from div to section
             testimonial.className = 'text-center p-4 border border-blue-200 rounded-lg';
             testimonial.innerHTML = `
                         <p class="text-gray-700 mb-4">"${comment.body}"</p>
