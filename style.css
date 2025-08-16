@@ -68,3 +68,57 @@ footer {
 footer a:hover {
   color: #ccc;               /* Light gray links on hover */
 }
+
+
+/* Responsive adjustments    */
+
+/* Header responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  header p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Hero section responsive */
+@media (max-width: 768px) {
+  #hero {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    padding: 0.8rem;
+    border-radius: 4px;
+  }
+}
+
+/* Form responsive */
+@media (max-width: 480px) {
+  #registration-form input,
+  #registration-form select,
+  #registration-form button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
