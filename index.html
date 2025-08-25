@@ -1,209 +1,117 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التدريب الذهني للاعبين | Mental Training</title>
+    <title>BrewHaven Coffee</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-
-<body class="bg-gray-100 font-sans">
-    <header class="py-8 shadow-lg">
-        <section class="container mx-auto px-4">
-            <h1 class="text-3xl md:text-4xl font-bold text-center mb-2">التدريب الذهني للاعبين الشباب</h1>
-            <p class="text-xl text-center font-semibold">نمِ قوتك الذهنية لتصل إلى أفضل أداء</p>
-        </section>
+<body class="bg-amber-50">
+    <!-- Header -->
+    <header class="bg-amber-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">☕ BrewHaven</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-amber-200">Home</a></li>
+                    <li><a href="#menu" class="hover:text-amber-200">Menu</a></li>
+                    <li><a href="#about" class="hover:text-amber-200">About</a></li>
+                    <li><a href="#contact" class="hover:text-amber-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- Hero Section -->
-        <section id="hero" class="flex flex-col md:flex-row items-center gap-8 mb-12">
-            <section class="md:w-1/2">
-                <img src="images/Brain_Exercising.png" alt="تمارين ذهنية" 
-                     class="w-full max-w-md mx-auto rounded-lg shadow-xl hover:rotate-2 transition-transform"
-                     id="hero-image">
-            </section>
-            <section class="md:w-1/2 bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-4">ما هو التدريب الذهني؟</h2>
-                <p class="mb-4 text-lg">
-                    التدريب الذهني هو تطوير القدرات العقلية مثل التركيز والثقة بالنفس والتحكم في المشاعر، وهو مهم جداً للاعبين الشباب لأنه يساعدهم على مواجهة التحديات وتحقيق أفضل أداء داخل الملعب وخارجه.
-                </p>
-            </section>
-        </section>
+    <!-- Hero Section -->
+    <section class="bg-amber-800 text-white py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Start Your Day With a Perfect Brew</h2>
+            <p class="text-xl mb-8">Handcrafted coffee and cozy atmosphere in the heart of the city</p>
+            <a href="#menu" class="bg-amber-600 text-white py-3 px-8 rounded-lg hover:bg-amber-700">View Menu</a>
+        </div>
+    </section>
 
-        <!-- Training Programs -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8">برامجنا التدريبية</h2>
-            <section id="training-cards" class="mt-6">
-                <!-- Cards will be added dynamically with JavaScript -->
-            </section>
-        </section>
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-900">Our Coffee Selection</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Coffee 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="h-40 bg-amber-300 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Espresso</h3>
+                    <p class="text-gray-600 mb-4">Strong and bold, our signature espresso blend.</p>
+                    <p class="font-bold text-lg">$3.50</p>
+                </div>
+                
+                <!-- Coffee 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="h-40 bg-amber-400 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Cappuccino</h3>
+                    <p class="text-gray-600 mb-4">Perfect balance of espresso, steamed milk, and foam.</p>
+                    <p class="font-bold text-lg">$4.25</p>
+                </div>
+                
+                <!-- Coffee 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="h-40 bg-amber-500 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Latte</h3>
+                    <p class="text-gray-600 mb-4">Smooth and creamy, with a hint of sweetness.</p>
+                    <p class="font-bold text-lg">$4.75</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-         <!-- Beginner Program -->
-            <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-bold mb-4 text-center">برنامج المبتدئين</h3>
-                <section class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead>
-                            <tr class="bg-gray-100">
-                                <th class="p-3 border text-right">المهارة</th>
-                                <th class="p-3 border text-right">الوصف</th>
-                                <th class="p-3 border text-right">المدة</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="p-3 border">التركيز الأساسي</td>
-                                <td class="p-3 border">تمارين لتحسين التركيز أثناء اللعب</td>
-                                <td class="p-3 border">4 أسابيع</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="p-3 border">التحكم في التوتر</td>
-                                <td class="p-3 border">تقنيات التنفس والاسترخاء</td>
-                                <td class="p-3 border">3 أسابيع</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 border">التصور الذهني</td>
-                                <td class="p-3 border">تمارين التخيل لتحسين الأداء</td>
-                                <td class="p-3 border">5 أسابيع</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </section>
-    
-  <!-- Intermediate Program -->
-            <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-bold mb-4 text-center">برنامج المتوسطين</h3>
-                <section class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead>
-                            <tr class="bg-gray-100">
-                                <th class="p-3 border text-right">المهارة</th>
-                                <th class="p-3 border text-right">الوصف</th>
-                                <th class="p-3 border text-right">المدة</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="p-3 border">التركيز المتقدم</td>
-                                <td class="p-3 border">تمارين تركيز في ظروف صعبة</td>
-                                <td class="p-3 border">6 أسابيع</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="p-3 border">إدارة الضغط</td>
-                                <td class="p-3 border">تحويل الضغط إلى طاقة إيجابية</td>
-                                <td class="p-3 border">4 أسابيع</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 border">التفكير التكتيكي</td>
-                                <td class="p-3 border">تحسين اتخاذ القرارات السريعة</td>
-                                <td class="p-3 border">5 أسابيع</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </section>
-    
-    <!-- Advanced Program -->
-            <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-bold mb-4 text-center">برنامج المحترفين</h3>
-                <section class="overflow-x-auto">
-                    <table class="w-full border-collapse">
-                        <thead>
-                            <tr class="bg-gray-100">
-                                <th class="p-3 border text-right">المهارة</th>
-                                <th class="p-3 border text-right">الوصف</th>
-                                <th class="p-3 border text-right">المدة</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="p-3 border">التركيز في المنافسة</td>
-                                <td class="p-3 border">الحفاظ على التركيز تحت الضغط العالي</td>
-                                <td class="p-3 border">8 أسابيع</td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="p-3 border">المرونة الذهنية</td>
-                                <td class="p-3 border">التكيف مع المواقف غير المتوقعة</td>
-                                <td class="p-3 border">6 أسابيع</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 border">القيادة الذهنية</td>
-                                <td class="p-3 border">تطوير مهارات القيادة داخل الفريق</td>
-                                <td class="p-3 border">7 أسابيع</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </section>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="bg-amber-100 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-900">About BrewHaven</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <p class="text-lg mb-4">Founded in 2010, BrewHaven has been serving the community with premium quality coffee and pastries.</p>
+                    <p class="text-lg mb-4">We source our beans from sustainable farms and roast them in-house to ensure the freshest flavor in every cup.</p>
+                    <p class="text-lg">Our cozy space is designed to be your home away from home - perfect for meetings, studying, or simply relaxing.</p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="h-64 w-64 bg-amber-300 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-900">Visit Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Location</h3>
+                    <p class="mb-4">123 Coffee Street</p>
+                    <p>Brewville, BC 12345</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <p class="mb-2">Monday - Friday: 7am - 8pm</p>
+                    <p class="mb-2">Saturday: 8am - 9pm</p>
+                    <p>Sunday: 8am - 6pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Testimonials -->
-        <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-center mb-8">آراء بعض اللاعبين</h2>
-            <section id="testimonials" class="grid md:grid-cols-2 gap-6">
-                <section class="text-center p-4 rounded-lg">
-                    <p class="mb-4">"التحسن في أدائي كان ملحوظاً بعد التدريبات الذهنية"</p>
-                    <p class="font-semibold">-  أحمد خالد</p>
-                </section>
-                <section class="text-center p-4 rounded-lg">
-                    <p class="mb-4">"ساعدني التدريب الذهني على التركيز بشكل أفضل"</p>
-                    <p class="font-semibold">يزن الغامدي</p>
-                </section>
-            </section>
-        </section>
-
-        <!-- Registration Form -->
-        <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-center mb-8">سجل معنا</h2>
-            <form id="registration-form" class="max-w-md mx-auto">
-                <section class="mb-4">
-                    <label for="fullname" class="block mb-2">الاسم الكامل</label>
-                    <input type="text" id="fullname" required class="w-full px-4 py-2 border rounded-lg">
-                    <p id="name-error" class="text-red-500 text-sm mt-1 hidden">يجب إدخال الاسم</p>
-                </section>
-                <section class="mb-4">
-                    <label for="email" class="block mb-2">البريد الإلكتروني</label>
-                    <input type="email" id="email" required class="w-full px-4 py-2 border rounded-lg">
-                    <p id="email-error" class="text-red-500 text-sm mt-1 hidden">يجب إدخال بريد إلكتروني صحيح</p>
-                </section>
-                <section class="mb-4">
-                    <label for="program" class="block mb-2">اختر البرنامج</label>
-                    <select id="program" class="w-full px-4 py-2 border rounded-lg">
-                        <option value="beginner">مبتدئ</option>
-                        <option value="intermediate">متوسط</option>
-                        <option value="advanced">محترف</option>
-                    </select>
-                </section>
-                <button type="submit" class="w-full py-3 rounded-lg transition-colors">
-                    تسجيل
-                </button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="py-8">
-        <section class="container mx-auto px-4">
-            <section class="flex flex-col md:flex-row justify-between items-center">
-                <section class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">التدريب الذهني للاعبين</h3>
-                    <p>coachRayan@gmail.comm</p>
-                    <p>0909021108</p>
-                </section>
-                <section class="flex gap-4">
-                    <a href="#" class="transition-colors">سياسة الخصوصية</a>
-                    <a href="#" class="transition-colors">الشروط والأحكام</a>
-                </section>
-            </section>
-            <section class="mt-6 text-center text-sm">
-                <p>جميع الحقوق محفوظة &copy; <span id="current-year"></span></p>
-            </section>
-        </section>
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12 px-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 BrewHaven Coffee Shop. All rights reserved.</p>
+            <p class="mt-4">Email: info@brewhaven.com | Phone: (555) 123-4567</p>
+        </div>
     </footer>
-
 </body>
 </html>
