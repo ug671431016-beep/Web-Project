@@ -1,10 +1,8 @@
-<<<<<<< HEAD
- body {
+body {
   background: #f8f8f8; 
   color: #222;         
   line-height: 1.6;    
 }
-
 
 header {
   background: rgb(18, 18, 18);    
@@ -28,7 +26,6 @@ header p {
   border: 1px solid #e5e5e5;   
   border-radius: 8px;          
 }
-
 
 #testimonials section {
   background: #f8f8f8;        
@@ -70,11 +67,10 @@ footer a:hover {
   color: #ccc;               /* Light gray links on hover */
 }
 
-
 /* Responsive adjustments    */
 
 /* Header responsive */
-@media print (max-width: 768px) {
+@media print and (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
   }
@@ -83,7 +79,7 @@ footer a:hover {
   }
 }
 
-@media screen (max-width: 480px) {
+@media screen and (max-width: 480px) {
   header h1 {
     font-size: 1.2rem;
     text-align: center;
@@ -123,6 +119,27 @@ img {
   max-width: 100%;
   height: auto;
 }
-=======
-@import "tailwindcss";
->>>>>>> 0c0ca3dc0b74cab02551f3bd1b2c8f7ec18b853b
+
+/* زر الانتقال للأعلى */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;  
+  z-index: 1000;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px #000;
+  cursor: pointer;
+  display: none;   /* يخفي الزر */
+  font-size: 1.5rem;
+  transition: background 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background: #444;
+}
+
