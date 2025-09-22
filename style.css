@@ -20,7 +20,7 @@ header p {
   font-weight: 500;      
 }
 
-/* 3. HERO SECTION - Image and intro text */
+/* HERO SECTION - Image and intro text */
 #hero {
   background: white;           
   border: 1px solid #e5e5e5;   
@@ -32,15 +32,17 @@ header p {
   border-left: 3px solid #000; 
 }
 
-/* 6. FORM - Sign up section */
-#registration-form input,
-#registration-form select {
+/* FORM - Sign up section */
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
   border: 1px solid #ddd;     /* Light gray border */
   border-radius: 6px;         /* Rounded corners */
 }
 
-#registration-form input:focus,
-#registration-form select:focus {
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
   border-color: #000;         /* Black border when clicked */
   outline: none;              /* Removes default browser outline */
 }
@@ -56,7 +58,7 @@ button[type="submit"]:hover {
   background: #333;           /* Dark gray on hover */
 }
 
-/* 7. FOOTER - Bottom section */
+/* FOOTER - Bottom section */
 footer {
   background: #000;           /* Black background */
   color: white;               /* White text */
@@ -65,59 +67,6 @@ footer {
 
 footer a:hover {
   color: #ccc;               /* Light gray links on hover */
-}
-
-/* Responsive adjustments    */
-
-/* Header responsive */
-@media print and (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  header p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  header p {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-}
-
-/* Hero section responsive */
-@media (max-width: 768px) {
-  #hero {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #hero {
-    padding: 0.8rem;
-    border-radius: 4px;
-  }
-}
-
-/* Form responsive */
-@media (max-width: 480px) {
-  #registration-form input,
-  #registration-form select,
-  #registration-form button {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* Images responsive */
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* زر الانتقال للأعلى */
@@ -137,9 +86,69 @@ img {
   display: none;   /* يخفي الزر */
   font-size: 1.5rem;
   transition: background 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
 #scrollTopBtn:hover {
   background: #444;
 }
 
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  
+  #hero {
+    padding: 1rem;
+  }
+  
+  .carousel-prev, .carousel-next {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  header p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  #hero {
+    padding: 0.8rem;
+    border-radius: 4px;
+  }
+  
+  #contact-form input,
+  #contact-form select,
+  #contact-form textarea,
+  #contact-form button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-prev {
+    right: 8px;
+  }
+  
+  .carousel-next {
+    left: 8px;
+  }
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}

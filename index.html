@@ -7,8 +7,6 @@
     <title>التدريب الذهني للاعبين | Mental Training</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-
 </head>
 
 <body class="bg-gray-100 font-sans">
@@ -33,6 +31,7 @@
                     التدريب الذهني هو تطوير القدرات العقلية مثل التركيز والثقة بالنفس والتحكم في المشاعر، وهو مهم جداً
                 </p>
                     للاعبين الشباب لأنه يساعدهم على مواجهة التحديات وتحقيق أفضل أداء داخل الملعب وخارجه.
+                </p>
             </section>
         </section>
 
@@ -144,44 +143,51 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-center mb-8">آراء بعض اللاعبين</h2>
-            <section id="testimonials" class="grid md:grid-cols-2 gap-6">
-                <section class="text-center p-4 rounded-lg">
-                    <p class="mb-4">"التحسن في أدائي كان ملحوظاً بعد التدريبات الذهنية"</p>
-                    <p class="font-semibold">- أحمد خالد</p>
-                </section>
-                <section class="text-center p-4 rounded-lg">
-                    <p class="mb-4">"ساعدني التدريب الذهني على التركيز بشكل أفضل"</p>
-                    <p class="font-semibold">يزن الغامدي</p>
-                </section>
-            </section>
+<!-- Testimonials Section -->
+<section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold text-center mb-8">آراء بعض اللاعبين</h2>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="testimonial-item text-center p-6 border rounded-lg">
+            <p class="mb-4 text-lg">"التحسن في أدائي كان ملحوظاً بعد التدريبات الذهنية، أصبحت أكثر تركيزاً في المباريات."</p>
+            <p class="font-semibold">- أحمد خالد</p>
         </section>
+        <section class="testimonial-item text-center p-6 border rounded-lg">
+            <p class="mb-4 text-lg">"ساعدني التدريب الذهني على التركيز بشكل أفضل وتخطي التوتر قبل المباريات المهمة."</p>
+            <p class="font-semibold">- يزن الغامدي</p>
+        </section>
+    </section>
+</section>
 
-        <!-- Registration Form -->
+        <!-- Contact Form -->
         <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-center mb-8">سجل معنا</h2>
-            <form id="registration-form" class="max-w-md mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">اتصل بنا</h2>
+            <form id="contact-form" class="max-w-md mx-auto">
                 <section class="mb-4">
                     <label for="fullname" class="block mb-2">الاسم الكامل</label>
-                    <input type="text" id="fullname" required class="w-full px-4 py-2 border rounded-lg">
-                    <p id="name-error" class="text-red-500 text-sm mt-1 hidden">يجب إدخال الاسم</p>
+                    <input type="text" id="fullname" name="fullname" required
+                        class="w-full px-4 py-2 border rounded-lg">
+                    <p id="name-error" class="text-red-500 text-sm mt-1 hidden">يجب إدخال الاسم (3 أحرف على الأقل)</p>
                 </section>
                 <section class="mb-4">
                     <label for="email" class="block mb-2">البريد الإلكتروني</label>
-                    <input type="email" id="email" required class="w-full px-4 py-2 border rounded-lg">
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg">
                     <p id="email-error" class="text-red-500 text-sm mt-1 hidden">يجب إدخال بريد إلكتروني صحيح</p>
                 </section>
                 <section class="mb-4">
-                    <label for="program" class="block mb-2">اختر البرنامج</label>
-                    <select id="program" class="w-full px-4 py-2 border rounded-lg">
-                        <option value="beginner">مبتدئ</option>
-                        <option value="intermediate">متوسط</option>
-                        <option value="advanced">محترف</option>
-                    </select>
+                    <label for="phone" class="block mb-2">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg">
+                    <p id="phone-error" class="text-red-500 text-sm mt-1 hidden">رقم الهاتف غير صحيح</p>
                 </section>
-                <button type="submit" class="w-full py-3 rounded-lg transition-colors">
-                    تسجيل
+                <section class="mb-4">
+                    <label for="message" class="block mb-2">الرسالة</label>
+                    <textarea id="message" name="message" required rows="4"
+                        class="w-full px-4 py-2 border rounded-lg"></textarea>
+                    <p id="message-error" class="text-red-500 text-sm mt-1 hidden">الرسالة يجب أن تحتوي على 10 أحرف على
+                        الأقل</p>
+                </section>
+                <button type="submit"
+                    class="w-full py-3 bg-black text-white rounded-lg transition-colors hover:bg-gray-800">
+                    إرسال
                 </button>
             </form>
         </section>
@@ -192,7 +198,7 @@
             <section class="flex flex-col md:flex-row justify-between items-center">
                 <section class="mb-4 md:mb-0">
                     <h3 class="text-xl font-bold mb-2">التدريب الذهني للاعبين</h3>
-                    <p>coachRayan@gmail.comm</p>
+                    <p>coachRayan@gmail.com</p>
                     <p>0909021108</p>
                 </section>
                 <section class="flex gap-4">
@@ -200,15 +206,18 @@
                     <a href="#" class="transition-colors">الشروط والأحكام</a>
                 </section>
             </section>
+            <section class="mt-4 text-center">
+                <p>عدد الزوار: <span id="visitor-count">0</span></p>
+            </section>
             <section class="mt-6 text-center text-sm">
                 <p>جميع الحقوق محفوظة &copy; <span id="current-year"></span></p>
             </section>
         </section>
     </footer>
 
- <button id="scrollTopBtn"></button>
+    <button id="scrollTopBtn">↑</button>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
