@@ -37,9 +37,38 @@
         <!-- Training Programs -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-center mb-8">برامجنا التدريبية</h2>
-            <section id="training-cards" class="mt-6">
-                <!-- Cards will be added dynamically with JavaScript -->
+            
+            <!-- Dynamic Cards Controls -->
+            <section class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-bold text-center mb-6">إضافة برامج تدريبية جديدة</h3>
+                
+                <section class="flex flex-col md:flex-row gap-4 justify-center items-end">
+                    <section class="flex-1">
+                        <label for="card-title" class="block mb-2 font-semibold">عنوان البرنامج</label>
+                        <input type="text" id="card-title" placeholder="أدخل عنوان البرنامج" 
+                               class="w-full px-4 py-2 border rounded-lg">
+                    </section>
+                    <section class="flex-1">
+                        <label for="card-desc" class="block mb-2 font-semibold">وصف البرنامج</label>
+                        <input type="text" id="card-desc" placeholder="أدخل وصف البرنامج" 
+                               class="w-full px-4 py-2 border rounded-lg">
+                    </section>
+                    <section class="flex gap-2">
+                        <button id="add-card-btn" class="py-2 px-6 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                            إضافة برنامج
+                        </button>
+                        <button id="fetch-tips-btn" class="py-2 px-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                            جلب نصائح
+                        </button>
+                    </section>
+                </section>
             </section>
+
+            <!-- Dynamic Training Cards -->
+            <section id="dynamic-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Cards will be added here dynamically -->
+            </section>
+
             <!-- Tables Container: Flex for side-by-side tables -->
             <section class="flex flex-col md:flex-row gap-6">
                 <!-- Beginner Program -->
@@ -141,20 +170,20 @@
             </section>
         </section>
 
-<!-- Testimonials Section -->
-<section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
-    <h2 class="text-3xl font-bold text-center mb-8">آراء بعض اللاعبين</h2>
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <section class="testimonial-item text-center p-6 border rounded-lg">
-            <p class="mb-4 text-lg">"التحسن في أدائي كان ملحوظاً بعد التدريبات الذهنية، أصبحت أكثر تركيزاً في المباريات."</p>
-            <p class="font-semibold">- أحمد خالد</p>
+        <!-- Testimonials Section -->
+        <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-8">آراء بعض اللاعبين</h2>
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section class="testimonial-item text-center p-6 border rounded-lg">
+                    <p class="mb-4 text-lg">"التحسن في أدائي كان ملحوظاً بعد التدريبات الذهنية، أصبحت أكثر تركيزاً في المباريات."</p>
+                    <p class="font-semibold">- أحمد خالد</p>
+                </section>
+                <section class="testimonial-item text-center p-6 border rounded-lg">
+                    <p class="mb-4 text-lg">"ساعدني التدريب الذهني على التركيز بشكل أفضل وتخطي التوتر قبل المباريات المهمة."</p>
+                    <p class="font-semibold">- يزن الغامدي</p>
+                </section>
+            </section>
         </section>
-        <section class="testimonial-item text-center p-6 border rounded-lg">
-            <p class="mb-4 text-lg">"ساعدني التدريب الذهني على التركيز بشكل أفضل وتخطي التوتر قبل المباريات المهمة."</p>
-            <p class="font-semibold">- يزن الغامدي</p>
-        </section>
-    </section>
-</section>
 
         <!-- Contact Form -->
         <section class="mb-12 bg-white p-6 rounded-lg shadow-lg">
